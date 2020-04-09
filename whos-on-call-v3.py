@@ -4,8 +4,6 @@ import os
 import requests
 import sys
 
-# https://ksphere.s3.amazonaws.com/whos-on-call.py
-
 """
 This script is supposed to be run at least every 12 hours after 9am
 and 9pm PST.  The script will call PagerDuty to determine the given on-call
@@ -121,7 +119,7 @@ if __name__ == '__main__':
             got_all_users = True
 
     primary = get_slack_id(users, primary[0])
-    print(secondary[0])
+    print(users[0])
 
     # There might not be a secondary.
     # But there should always be a primary.
